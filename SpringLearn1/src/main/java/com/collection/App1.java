@@ -1,6 +1,8 @@
 
 package com.collection;
 
+import java.util.Map.Entry;
+
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -20,6 +22,12 @@ public class App1 {
 
 		for(Employee s:department.getEmpList()){
 			System.out.println(s.getName());
+		}
+		System.out.println("********************");
+
+		for(Entry<String,Employee> e : department.getEmpMaps().entrySet()){
+			
+			System.out.println(e.getKey()+"+"+e.getValue().getName()+"+"+e.getValue().getId());
 		}
 	}
 	
