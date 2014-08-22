@@ -24,7 +24,14 @@
 				<entry key="2" value-ref="emp2"/>
 			</map>
 		</property>
+		<property name="pp">
+			<props>
+				<prop key="pp1" >abcd</prop>
+				<prop key="pp2" >hello</prop>
+				<!-- <Null/> -->
+			</props>
 		
+		</property>
 	</bean>
 	
 	<bean id="emp1" class="com.collection.Employee">
