@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	<bean id="department" class="com.collection.Department" >
+		<!-- 利用数组或者任意迭代的简单数据类型 -->
+		<property name="name" value="财务部" />
+		<property name="empName">
+			<list>
+				<value>阿姨拿</value>
+				<value>空烧</value>
+				<value>空罐少女</value>
+			</list>
+		</property>
+		<property name="empList">
+			<list>
+				<ref bean="emp1"/> 
+				<ref bean="emp2"/>
+			</list>
+		</property>
+
+		
+	</bean>
+	
+	<bean id="emp1" class="com.collection.Employee">
+		<property name="name" value="小张"/>
+	</bean>
+	<bean id="emp2" class="com.collection.Employee">
+		<property name="name" value="小李"/>
+	</bean>
+
+</beans>
